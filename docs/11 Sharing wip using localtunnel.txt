@@ -1,0 +1,8 @@
+Sharing work inprogress
+
+localtunnel - easiest + works with browser sync
+punches hole in firewall so local machine can operate as a web server
+npm install localtunnel -g
+start your app
+lt --port3000
+

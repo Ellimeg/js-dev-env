@@ -1,0 +1,36 @@
+Sharing work-in-progress
+========================
+Browser sync does not expose a public ip (for testing) outside your local network
+To share your work on public web (not aws or azure as these costs!)
+options:
+
+localtunnel - easiest + works with browser sync
+punches hole in firewall so loacl machine can operate as web server
+npm install localtunnel -g
+start your app
+lt --port3000
+
+ngrok - more secure - reqs login
+punches hole in firewall so loacl machine can operate as web server
+sign up
+intsall ngrok
+install authtoken
+start app
+./ngrok http 80
+
+now  - no dependency
+Does not punch hole in ur firewall
+Deploys your app up (if has package.json i.e. a Node.js app) to the cloud (Nows server)
+each time you deploy you'll get a new unique url
+can be used for producton
+install: npm install -g now
+Create a start script that opens your preferred web server e.g. express
+To deploy just type: now
+Good option if you have a server side componant thats node based as its always on.
+
+surge
+like now but only supports static files
+Deploy  static files only
+install: npm install -g surge
+run; surge (prompts for un and pwd - else it will use your existing)
+

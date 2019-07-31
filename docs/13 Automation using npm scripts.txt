@@ -1,0 +1,15 @@
+Call seperate files from the scripts section of the package.json
+
+1. Creating npm script that starts up our dev env:
+1.1 create 'start' section in scripts (By convention its called 'start')
+1.2 @> npm start <= opens up the application
+
+Note there is no need to type the run keyword with either
+
+  npm start = npm run start
+  npm test = npm run test
+
+npm scripts add node_modules/.bin to the path automatically
+
+packages called from npm scripts do not need to be installed globally :-)
+

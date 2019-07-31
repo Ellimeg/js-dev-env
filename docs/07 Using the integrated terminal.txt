@@ -1,0 +1,14 @@
+View > Terminal
+opens in project root dir
+to (re) install all pacakages > npm install:
+
+//------------------------------------------------
+PS E:\repos\github\ellimeg\js-dev-env> npm install
+audited 10829 packages in 20.661s
+found 0 vulnerabilities
+
+PS E:\repos\github\ellimeg\js-dev-env>
+//------------------------------------------------
+
+puts everything in node_modules
+auditing occurs automtically

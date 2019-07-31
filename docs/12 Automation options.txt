@@ -1,0 +1,34 @@
+3 most popular for js automation:
+
+1. Grunt
+original
+uses configuration over code
+writes intermediary files between steps
+large plugin ecosystem
+
+2. Gulp
+uses in-memory streams (pipes) so no writes to disc
+Faster
+Code over configuration
+large plugin ecosystem
+
+3. npm scripts
+declared in scripts section of package.json
+leverage your OS' command line
+Directly use npm packages
+Calls separet Node scriptsConvention-based pre/post hooks
+Leverage worlds largest package manager
+
+Why npm scripts:
+use tools Directly
+one less layer of extraction
+simpler debugging
+better docs no need to swith between different doc sites)
+easu to learn
+simple
+
+
+
+
+
+

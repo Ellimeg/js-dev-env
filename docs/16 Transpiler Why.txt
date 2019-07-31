@@ -1,0 +1,67 @@
+Basically you want all the latest features of javascript transpiled down to ES5 so it works in any browser.
+i.e.: next-gen JavaScript in =Transpiler=> browser-compatible JavaScript out
+
+e.g.: CoffeScript - provides syntactic sugar for a number of features not yet native to JavaScript, while discouraging some of JavaScript's "bad parts".
+ and TypeScript - is more drastic, adding classical object-oriented semantics to a fundamentally different language.
+ Anything you can write in JavaScript, you can write in CoffeeScript or TypeScript.
+
+JavaScript:
+"use strict";
+
+// Good 'ol JS
+function printSecret ( secret ) {
+    console.log(`${secret}. But don't tell anyone.`);
+}
+
+printSecret("I don't like CoffeeScript");
+//-----------------------------------------------------
+CoffeeScript: light weight language which 'transcompiles' into JavaScript.
+a shorthand form of JavaScript, its syntax is pretty simple compared to JavaScript
+based on Ruby and Python
+provides better syntax avoiding the quirky parts of JavaScript,
+still retaining the flexibility and beauty of the language.
+is very sensitive to whitespaces, so programmers need to be very careful
+while providing indentations. If we do not maintain proper indentation,
+the entire code may go wrong.
+"use strict"
+
+# CoffeeScript
+printSecret (secret) =>
+    console.log '#{secret}. But don't tell anyone.'
+
+printSecret "I don't like JavaScript."
+//-----------------------------------------------------
+TypeScript:
+"use strict";
+
+// TypeScript -- JavaScript, with types and stuff
+function printSecret ( secret : string ) {
+    console.log("${secret}. But don't tell anyone.");
+}
+
+printSecret("I don't like TypeScript.");
+
+Why Transpilers?
+Why learn new syntax and pick up new tools if all we get at the end of the day is the JavaScript we could have written in the first place?
+Writing in a language that "thinks" the way you do makes you more productive.
+ People with backgrounds in OOP often like TypeScript because it's familiar territory.
+ Pythonistas like CoffeeScript. Clojurists write ClojureScript. You get the idea.
+
+But the rest of us, who are perfectly fine with writing plain JavaScript, still use transpilers,
+because they're the only reliable way to use features from ES2015 and beyond.
+
+transpiler vs a compiler isn't a worthwhile distinction, so I just say compiler.
+A transpiler is a type of compiler.
+The standard definition for compiler is something that translates between languages
+(though in common parlance it's usually used to denote cases where the target language
+is something like ASM or byte-code). So that includes transpilers as a subset.
+
+strictly speaking: Transpilers, or source-to-source compilers, are tools that read source code written in one
+ programming language, and produce the equivalent code in another language.
+ Languages you write that transpile to JavaScript are often called compile-to-JS languages,
+ and are said to target JavaScript. There are loads!
+
+ https://github.com/jashkenas/coffeescript/wiki/list-of-languages-that-compile-to-js
+
+
+

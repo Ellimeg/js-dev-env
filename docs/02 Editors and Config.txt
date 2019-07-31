@@ -1,0 +1,26 @@
+1. Use Visual Studio code
+
+2. Apply .editorconfig file
+	2.1 In VSCode add new file called .editorconfig
+	2.2 paste in the following:
+//---------------------------------
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+//---------------------------------
+	2.3 GoTo: https://editorconfig.org/ > Click on Download a Plugin
+	2.4 Find & click on plugin for VSCode > redirects to install page > Click Install
+		this will open up in VSCode from where the install is completed.
+		click install > reload to see Editor Config for VS Code in Extensions.
+		restart 
+
+	

@@ -1,0 +1,32 @@
+1. Create Repo js-dev-env + description
+
+2. public + Initialize with README
+
+3. Add .getignore: Node
+
+4. Click create repository
+
+5. Click clone or download & copy uri to clipboard
+
+4. Clone repo to your machine. Open up bash and change to dir where installing
+	use git clone + uri to checkout the repo:
+	
+//---------------------------
+GOODINRX@LNGWOKL7037033 MINGW64 ~
+$ cd E:/ellimeg
+
+GOODINRX@LNGWOKL7037033 MINGW64 /e/ellimeg
+$ cd E:/repos/github
+
+GOODINRX@LNGWOKL7037033 MINGW64 /e/repos/github
+$ git clone https://github.com/Ellimeg/js-dev-env.git
+Cloning into 'js-dev-env'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+
+GOODINRX@LNGWOKL7037033 MINGW64 /e/repos/github
+$
+//---------------------------

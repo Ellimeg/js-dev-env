@@ -1,0 +1,112 @@
+JS finally got off ES5 after a decade of stagnation. the future is ES. and many releases: 1 per yr
+For this reason Transpiling is common.
+
+JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.
+
+ECMAScript is the official name of the language.
+
+From 2015 ECMAScript is named by year (ECMAScript 2015).
+
+ECMAScript Versions:
+      JSv
+1996  1.0
+1997        (ES1) - 1st ed
+1998  1.3   (ES2) - editorial changes only
+1999  1.5   (ES3) - added: regular expressions and try/catch
+2000  STAGNATION (ES4 never released)
+2009  1.8.5 (ES5) - added: strinct mode, json support, string.trim(), Array.isArray() array iteration methods
+                    massive release so years to digest by browser manufacturers...
+2015        (ES6/ES2015) - added: let, const, default param value, Array.find(), Array.finfIndex()
+2016        (ES7/ES2016) - added: exponential operator (**). Array.prototype.includes
+2017        (ES8/ES2017) - added: string padding, new Object properties, async functions, shared memory
+2018        (ES9/ES2018) - added: rest / spread properties, async iteration, Promise.finally(), updated regex
+
+ES3 is fully supported in all browsers.
+ES5 is fully supported in all modern browsers since 2013
+
+Tomorrow's JavaScript, Today:
+The es6 compatibility table https://kangax.github.io/compat-table/es6/
+shows that, while we're clearly making progress, it's not quite time to write ES2015 directly.
+ Instead, we write our source in ES2015, and let a transpiler translate it to vanilla ES5 that works in every browser.
+ If you need to support browsers from the last millennium, you can even compile down to ES3.
+
+So which transpiler?
+
+ 3 contenders:
+
+ 1. Babel:
+    modern, standards based
+    Polyfill features missing in your target environment (through @babel/polyfill)
+    Is not adding any "syntactic sugar" on top of JavaScript,
+      it is simply bridging the gap between ES5 and ES6.
+    ECMAScript 2015+ code->ES5
+    Suitable for developers who want to write plain JavaScript using newer language features.
+
+ 2. TypeScript:
+    a superset of JS : TypeScript(ES6 ( ES5 () ) )
+    Similar to other languages like coffeescript adds "syntactic sugar"
+    enhanced autocompletion
+    Clearer intent
+    Suitable for large applications that would benefit from features like:
+          Type annotations & type inference.
+          Generics.
+          Interfaces, enums, namespaces, modules and classes (the latter two available in ES6).
+          Safe refactoring.
+ 3. Elm:
+    looks nothing like JS
+    Clean syntax
+    immutable data structure
+    friendly errors
+    All errors are compil-time errors
+    interops with JS
+    functional paradigm
+
+
+ TypeScript                     vs  Babel
+
+ enhanced automplete                Write standardized javascript
+ enhanced code redability           leverage full JS ecosystem
+ safer refactoring                  uses experimental feaures earlier
+ interfaces                         no type defs or annotations required
+ ESLint compatbile??                Yes
+                                    ES6 imports are statically analyzable
+                                    Test, Lint, Bable, Great libs, IDE = safety
+
+https://medium.com/@BuildMySite1/what-is-typescript-pros-and-cons-8dc5cdc3e78d
+
+Note:
+
+TypeScript misconception: that TypeScript and ES2015/ES2016 Javascript are different. WRONG.
+Simply rename any ES2015 class you might have to be .ts instead of .js.
+You might get some type errors and whatnot, but it will transpile it to Javascript just like Babel does.
+
+Port a Javascript application written using ES2015/ES2016 features like; classes, promises and a modules functionality.
+By a recursive rename of all files with .js to be .ts and everything worked out of the box.
+
+Remember that TypeScript is merely a superset of Javascript,
+you're writing strongly typed code that gets converted into Javascript
+and if you come from a .NET background, then you will feel right at home.
+TypeScript being a Microsoft product, it makes sense that many underlying .NET concepts ported over.
+
+You can also get TypeScript code to output as ES6 friendly code
+and then you can use Babel to transpile that output (if you want).
+This allows you to get the strong typing and intellisense
+in your IDE as well and you use Babel's great ECMAScript specification support.
+
+At the end of the day, use what works for you.
+If you want to introduce strong typing into your projects (there are a lot of benefits doing so)
+then TypeScript is the best superset out there.
+
+WARNING: Once you go TypeScript you won't go back to plain old Javascript ever again
+(at least not by choice).
+
+For the sake of learning JavaScript choice Babel!
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+Express Web Server
+==================
+Use Express for dev web server (popular, powerfull, configurable)
+
+
+1. Install: Its already intslled with npm insall step(listed in package.json: "express":
+
+2. Configure:
+2.1 Create a folder called buildScripts in root of project (stores all build related tools)
+2.2 Inside create file srcServer.js - see file for explaination
+    - will configure a web server to serve up files in our src dir
+2.2 Create folder called src in root & containing file index.html
+2.3 To run: type> node .\buildScripts\srcServer.js
+2.4 To kill process Ctrl C

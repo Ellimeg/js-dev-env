@@ -1,0 +1,303 @@
+project level installs:
+======================
+
+Run the following in VSCodes Terminal:
+npm install --save whatwg-fetch
+npm install --save-dev @babel/core @babel/cli @babel/preset-env
+npm install --save-dev chalk
+npm install --save-dev cheerio (Server)
+npm install --save-dev compression
+npm install --save-dev chai (change verion number to wildcard "chai": "*")
+npm install --save-dev mocha (change verion number to wildcard "mocha": "*")
+npm install --save-dev cross-env
+npm install --save-dev css-loader
+npm install --save-dev webpack
+npm install --save-dev html-webpack-plugin
+npm install --save-dev webpack-dev-middleware
+npm install --save-dev webpack-hot-middleware
+npm install --save-dev webpack-md5-hash
+npm install --save-dev eslint
+npm install --save-dev eslint-plugin-import
+npm i -D eslint-watch
+npm i -D express
+npm i -D jsdom
+npm i -D localtunnel
+npm i -D nock
+npm i -D npm-run-all
+npm i -D numeral
+
+
+Note : 	npm install will download packages and place them into a folder called 'node_modules'
+	in the project root
+   	Click refresh to see this folder
+   	Note if a package has a dependency, that is downloaded as well
+
+	Installs to'dependencies' include deppendencies for production & dev
+
+//--------------------Detail---------------------------------------------------------------------//
+1. whatwg-fetch
+	info:	https://www.npmjs.com/package/whatwg-fetch
+		https://github.github.io/fetch/
+	summary: A window.fetch polyfill
+		 The fetch() function is a Promise-based mechanism for programmatically making
+		 web requests in the browser. This project is a polyfill that implements a subset
+		 of the standard Fetch specification, enough to make fetch a viable replacement
+		 for most uses of XMLHttpRequest in traditional web applications.
+
+	installation:	npm install whatwg-fetch
+	Notes:
+	This project doesn't work under Node.js environments.
+	 It's meant for web browsers only.
+	 You should ensure that your application doesn't try to package and run this on the server.
+	 You will also need a Promise polyfill for older browsers.
+	 We recommend taylorhakes/promise-polyfill for its small size and Promises/A+ compatibility.
+
+2. Babel
+	info:	https://babeljs.io/docs/en/
+		https://babeljs.io/docs/en/usage
+	summary: A JavaScript compiler
+		 A toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards
+		 compatible version of JavaScript in current and older browsers or environments.
+		Here are the main things Babel can do for you:
+		- Transform syntax
+		- Polyfill features that are missing in your target environment (through @babel/polyfill)
+		- Source code transformations (see docss)
+		And more! (https://babeljs.io/docs/en/).
+
+	installation:	npm install --save-dev @babel/core @babel/cli @babel/preset-env
+	Notes:
+	Don't install polyfill for now: npm install --save @babel/polyfill
+	@babel/core: the core functionality of Babel
+	@babel/cli: is a tool that allows you to use babel from the terminal.
+	@babel/preset-env: Transformations come in the form of plugins, which are small JavaScript programs
+	 that instruct Babel on how to carry out transformations to the code.
+	 Instead of adding all the plugins we want one by one, we can use a "preset"
+	 which is just a pre-determined set of plugins.
+
+3. chalk
+	info:	https://www.npmjs.com/package/chalk
+	summary: provides terminal string styling
+
+	installation:	npm install --save-dev chalk
+	Notes:
+
+4. Cheerio
+	info:	https://www.npmjs.com/package/cheerio
+	summary: Fast, flexible & lean implementation of core jQuery
+		 designed specifically for the server
+
+	installation:	npm install --save-dev cheerio
+	Notes:
+
+5. Compression
+	info:	https://www.npmjs.com/package/compression
+	summary: compression middleware supporting: deflate & gzip
+
+	installation:	npm install --save-dev compression
+	Notes:
+
+6. Chai
+	info:	https://www.chaijs.com/
+		https://github.github.io/fetch/
+	summary: Chai is a BDD / TDD assertion library for node and the browser
+		 that can be delightfully paired with any javascript testing framework.
+
+
+	installation:	npm install --save-dev chai
+	Notes:
+	if you see the following warnings
+	npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.7 (node_modules\fsevents):
+	npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.7: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+	run npm i -f (force)
+	npm WARN using --force I sure hope you know what you are doing.
+
+	> fsevents@1.2.7 install E:\repos\github\ellimeg\js-dev-env\node_modules\fsevents
+	> node install
+
+	added 68 packages from 33 contributors and audited 3608 packages in 17.593s
+	found 0 vulnerabilities
+
+7. Mocha
+	info:	https://mochajs.org/
+	summary: the test framework for chai. running on Node.js and in the browser,
+		 making asynchronous testing simple and fun. Mocha tests run serially,
+		 allowing for flexible and accurate reporting, while mapping uncaught
+		 exceptions to the correct test cases
+
+	installation:	npm install --save-dev mocha
+	Global install: npm install --global mocha
+	Notes:
+
+8. cross-env
+	info:	https://www.npmjs.com/package/cross-env
+	summary: Allows you to run scripts that set and use environment variables across platforms
+
+	installation:	npm install --save-dev cross-env
+	Notes:	Removes worrying about setting or using the environment variable properly for the platform.
+		Just set it like you would if it's running on a POSIX system,
+		and cross-env will take care of setting it properly.
+		With POSIX, you use: $ENV_VAR and on windows you use %ENV_VAR%.
+
+9. css-loader
+	info:	https://www.npmjs.com/package/css-loader
+	summary: Interprets @import and url() like import/require() and will resolve them.
+		 Use with webpack.
+
+	installation:	npm install --save-dev css-loader
+	Notes: On install you will get the following warninf if web pack is not installed
+	npm WARN css-loader@2.1.0 requires a peer of webpack@^4.0.0 but none is installed. You must install peer dependencies yourself.
+
+10 Webpack
+	info:	https://www.npmjs.com/package/webpack
+	summary: a module bundler. Its main purpose is to bundle JavaScript files
+		 for usage in a browser, yet it is also capable of transforming,
+		 bundling, or packaging just about any resource or asset.
+
+	installation:	npm install --save-dev webpack
+	Notes:
+
+11 html-webpack-plugin
+	info:	https://www.npmjs.com/package/webpack
+	summary: Simplifies creation of HTML files (index.html) to serve your bundles
+
+	installation:	npm install --save-dev html-webpack-plugin
+	Notes:
+
+12 webpack-dev-middleware
+	info:	https://www.npmjs.com/package/webpack-dev-middleware
+	summary: An express-style development middleware for use with webpack bundles
+           and allows for serving of the files emitted from webpack.
+           This should be used for development only.
+
+	installation:	npm install --save-dev compression
+	Notes: using this middleware include:
+          No files are written to disk, rather it handles files in memory
+          If files changed in watch mode, the middleware delays requests until compiling has completed.
+          Supports hot module reload (HMR).
+
+13 webpack-hot-middleware
+  info:	https://www.npmjs.com/package/webpack-hot-middleware
+	summary: Webpack hot reloading using only webpack-dev-middleware.
+           This allows you to add hot reloading into an existing server
+           without webpack-dev-server.
+
+	installation:	npm install --save-dev webpack-hot-middleware
+	Notes: module is only concerned with the mechanisms to connect
+         a browser client to a webpack server & receive updates.
+         It will subscribe to changes from the server and execute those changes
+         using webpack's HMR API. Actually making your application capable of
+         using hot reloading to make seamless changes is out of scope,
+         and usually handled by another library.
+
+14 webpack-md5-hash
+  info:	https://www.npmjs.com/package/webpack-md5-hash
+	summary: Plugin to replace a standard webpack chunkhash with md5.
+
+	installation:	npm install --save-dev webpack-md5-hash
+	Notes:
+
+15. eslint
+  info:	https://www.npmjs.com/package/eslint
+	summary: a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
+
+	installation:	npm install --save-dev eslint
+	Notes: similar to JSLint and JSHint with a few exceptions:
+          ESLint uses Espree for JavaScript parsing.
+          ESLint uses an AST to evaluate patterns in code.
+          ESLint is completely pluggable, every single rule is a plugin and you can add more at runtime.
+
+16. eslint-plugin-import
+  info:	https://www.npmjs.com/package/eslint-plugin-import
+	summary: This plugin intends to support linting of ES2015+ (ES6+) import/export syntax,
+           and prevent issues with misspelling of file paths and import names.
+           All the goodness that the ES2015+ static module syntax intends to provide,
+           marked up in your editor.
+
+	installation:	npm install --save-dev eslint-plugin-import
+	Notes:
+
+17. eslint-watch
+  info:	https://www.npmjs.com/package/eslint-watch
+	summary: Saves importing Webpack, Grunt, or some other task package into your project.
+           is a simple command line tool that wraps Eslint.
+           Eslint Watch provides file watching and command line improvements to the currently
+           existing Eslint command line interface. All commands that Eslint offers can be
+           used with the addition of a watch command and a couple new templating views
+
+	installation:	npm i -D eslint-watch
+	Notes:
+
+18 express
+  info:	https://www.npmjs.com/package/compression
+	summary: a minimal and flexible Node.js web application framework that provides
+           a robust set of features for web and mobile applications
+
+	installation:	npm i -D express
+	Notes:
+
+19. jsdom
+  info:	https://www.npmjs.com/package/jsdom
+  summary: a pure-JavaScript implementation of many web standards,
+            notably the WHATWG DOM and HTML Standards, for use with Node.js.
+            In general, the goal of the project is to emulate enough of a subset
+            of a web browser to be useful for testing and scraping real-world web applications.
+
+    installation:	npm i -D jsdom
+    Notes:
+
+20. localtunnel
+  info:	https://www.npmjs.com/package/localtunnel
+  summary: exposes your localhost to the world for easy testing and sharing!
+            No need to mess with DNS or deploy just to have others test out your changes.
+            For working with browser testing tools like browserling or external api callback services
+            like twilio which require a public url for callbacks.
+
+    installation:	npm i -D localtunnel
+    Notes:
+
+21. nock
+    info:	https://www.npmjs.com/package/nock
+    summary: HTTP server mocking and expectations library for Node.js
+
+    installation:	npm i -D nock
+    Notes:
+
+22. npm-run-all
+
+    info:	https://www.npmjs.com/package/npm-run-all
+    summary: A CLI tool to run multiple npm-scripts in parallel or sequential.
+
+    installation:	npm i -D npm-run-all
+    Notes:
+
+23. numeral
+    info:	https://www.npmjs.com/package/numeral
+    summary: A javascript library for formatting and manipulating numbers.
+
+    installation:	npm i -D numeral
+    Notes:
+
+24. open
+    info:	https://www.npmjs.com/package/open
+    summary: A CLI tool to run multiple npm-scripts in parallel or sequential.
+
+    installation:	npm i -D open
+    Notes:  var open = require("open");
+            open("http://www.google.com");
+
+25 rimraf
+    info:	https://www.npmjs.com/package/rimraf
+    summary: The UNIX command (remove) rm -rf for node.
+
+    installation:	npm i -D rimraf
+    Notes:
+
+26 now
+    info:	https://www.npmjs.com/package/now & https://zeit.co/docs
+    For the source code, check out: https://github.com/zeit/now-cli
+    Now is a cloud platform for serverless deployment. It enables developers to host websites and web services
+    that deploy instantly, scale automatically, and require no supervision,
+    all with minimal configuration.
+    Install globally
+
+    installation: npm i now -g

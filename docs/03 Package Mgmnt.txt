@@ -1,0 +1,338 @@
+Package Mgmnt
+=============
+Choices:
+Bower - No building (old fashioned)
+Jspm - builds and bundles
+Yarn - builds and bundles
+
+Yarn		vs		npm
+fast				fast
+lockfiles			lockfiles (:commited to repo to ensure same versions)
+audit(not as good)		audit
+workspaces (allows project separation with independent pkg mgmnt)
+				comes with node
+
+npm  - most popular updated regularly + easy bundler. (https://blog.npmjs.org/)
+
+1. Install npm by installing Node:
+1.1	To check if already installed:
+	C:\Users\roger>node -v
+	v11.9.0
+
+	C:\Users\roger>npm -v
+	6.5.0
+1.2 	To install node: 
+	download instaler from https://nodejs.org
+	Also installs (or upgrades):
+	- choclatey
+	- Python2
+	- .NET Framework 4.6.2
+	- visualstudio2017-installer
+	- visualstudio2017buildtools
+	
+Console output looks like this: 
+
+Getting latest version of the Chocolatey package for download.
+Getting Chocolatey from https://chocolatey.org/api/v2/package/chocolatey/0.10.11.
+Downloading 7-Zip commandline tool prior to extraction.
+Extracting C:\Users\goodinrx\AppData\Local\Temp\chocolatey\chocInstall\chocolatey.zip to C:\Users\goodinrx\AppData\Local\Temp\chocolatey\chocInstall...
+Installing chocolatey on this machine
+Creating ChocolateyInstall as an environment variable (targeting 'Machine')
+  Setting ChocolateyInstall to 'C:\ProgramData\chocolatey'
+WARNING: It's very likely you will need to close and reopen your shell
+  before you can use choco.
+Restricting write permissions to Administrators
+We are setting up the Chocolatey package repository.
+The packages themselves go to 'C:\ProgramData\chocolatey\lib'
+  (i.e. C:\ProgramData\chocolatey\lib\yourPackageName).
+A shim file for the command line goes to 'C:\ProgramData\chocolatey\bin'
+  and points to an executable in 'C:\ProgramData\chocolatey\lib\yourPackageName'.
+
+Creating Chocolatey folders if they do not already exist.
+
+WARNING: You can safely ignore errors related to missing log files when
+  upgrading from a version of Chocolatey less than 0.9.9.
+  'Batch file could not be found' is also safe to ignore.
+  'The system cannot find the file specified' - also safe.
+WARNING: Not setting tab completion: Profile file does not exist at
+'C:\Users\goodinrx\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1'.
+Chocolatey (choco.exe) is now ready.
+You can call choco from anywhere, command line or powershell by typing choco.
+Run choco /? for a list of functions.
+You may need to shut down and restart powershell and/or consoles
+ first prior to using choco.
+Ensuring chocolatey commands are on the path
+Ensuring chocolatey.nupkg is in the lib folder
+Chocolatey v0.10.11
+Upgrading the following packages:
+python2;visualstudio2017-workload-vctools
+By upgrading you accept licenses for the packages.
+python2 is not installed. Installing...
+Progress: Downloading python2 2.7.15... 100%
+Progress: Downloading python2 2.7.15... 100%
+
+python2 v2.7.15 [Approved]
+python2 package files upgrade completed. Performing other installation steps.
+Downloading python2 64 bit
+  from 'https://www.python.org/ftp/python/2.7.15/python-2.7.15.amd64.msi'
+Progress: 100% - Completed download of C:\Users\goodinrx\AppData\Local\Temp\chocolatey\python2\2.7.15\python-2.7.15.amd64.msi (19.31 MB).
+Download of python-2.7.15.amd64.msi (19.31 MB) completed.
+Hashes match.
+Installing python2...
+python2 has been installed.
+Installed to 'C:\Python27'
+Adding C:\Python27 to PATH if needed
+  python2 may be able to be automatically uninstalled.
+Environment Vars (like PATH) have changed. Close/reopen your shell to
+ see the changes (or in powershell/cmd.exe just type `refreshenv`).
+ The upgrade of python2 was successful.
+  Software installed as 'msi', install location is likely default.
+visualstudio2017-workload-vctools is not installed. Installing...
+Progress: Downloading chocolatey-visualstudio.extension 1.7.1... 100%
+Progress: Downloading chocolatey-visualstudio.extension 1.7.1... 100%
+Progress: Downloading chocolatey-visualstudio.extension 1.7.1... 100%
+Progress: Downloading visualstudio2017-workload-vctools 1.3.1... 100%
+Progress: Downloading visualstudio2017-workload-vctools 1.3.1... 100%
+Progress: Downloading visualstudio2017-workload-vctools 1.3.1... 100%
+Progress: Downloading vcredist2017 14.16.27024.1... 100%
+Progress: Downloading vcredist2017 14.16.27024.1... 100%
+Progress: Downloading vcredist2017 14.16.27024.1... 100%
+Progress: Downloading vcredist140 14.16.27024.1... 100%
+Progress: Downloading vcredist140 14.16.27024.1... 100%
+Progress: Downloading vcredist140 14.16.27024.1... 100%
+Progress: Downloading KB3033929 1.0.4... 100%
+Progress: Downloading KB3033929 1.0.4... 100%
+Progress: Downloading KB3033929 1.0.4... 100%
+Progress: Downloading chocolatey-windowsupdate.extension 1.0.3... 100%
+Progress: Downloading chocolatey-windowsupdate.extension 1.0.3... 100%
+Progress: Downloading chocolatey-windowsupdate.extension 1.0.3... 100%
+Progress: Downloading KB3035131 1.0.2... 100%
+Progress: Downloading KB3035131 1.0.2... 100%
+Progress: Downloading KB3035131 1.0.2... 100%
+Progress: Downloading KB2919355 1.0.20160915... 100%
+Progress: Downloading KB2919355 1.0.20160915... 100%
+Progress: Downloading KB2919355 1.0.20160915... 100%
+Progress: Downloading KB2919442 1.0.20160915... 100%
+Progress: Downloading KB2919442 1.0.20160915... 100%
+Progress: Downloading KB2919442 1.0.20160915... 100%
+Progress: Downloading KB2999226 1.0.20181019... 100%
+Progress: Downloading KB2999226 1.0.20181019... 100%
+Progress: Downloading KB2999226 1.0.20181019... 100%
+Progress: Downloading visualstudio2017-installer 1.0.2... 100%
+Progress: Downloading visualstudio2017-installer 1.0.2... 100%
+Progress: Downloading visualstudio2017-installer 1.0.2... 100%
+Progress: Downloading dotnet4.6.2 4.6.01590.20170129... 100%
+Progress: Downloading dotnet4.6.2 4.6.01590.20170129... 100%
+Progress: Downloading dotnet4.6.2 4.6.01590.20170129... 100%
+Progress: Downloading visualstudio2017buildtools 15.9.4.0... 100%
+Progress: Downloading visualstudio2017buildtools 15.9.4.0... 100%
+Progress: Downloading visualstudio2017buildtools 15.9.4.0... 100%
+
+chocolatey-visualstudio.extension v1.7.1 [Approved]
+chocolatey-visualstudio.extension package files upgrade completed. Performing other installation steps.
+ Installed/updated chocolatey-visualstudio extensions.
+ The upgrade of chocolatey-visualstudio.extension was successful.
+  Software installed to 'C:\ProgramData\chocolatey\extensions\chocolatey-visualstudio'
+
+chocolatey-windowsupdate.extension v1.0.3 [Approved]
+chocolatey-windowsupdate.extension package files upgrade completed. Performing other installation steps.
+ Installed/updated chocolatey-windowsupdate extensions.
+ The upgrade of chocolatey-windowsupdate.extension was successful.
+  Software installed to 'C:\ProgramData\chocolatey\extensions\chocolatey-windowsupdate'
+
+KB3035131 v1.0.2 [Approved]
+kb3035131 package files upgrade completed. Performing other installation steps.
+Skipping installation because update KB3035131 does not apply to this operating system (Microsoft Windows 10 Enterprise).
+ The upgrade of kb3035131 was successful.
+  Software install location not explicitly set, could be in package or
+  default install location if installer.
+
+KB3033929 v1.0.4 [Approved]
+kb3033929 package files upgrade completed. Performing other installation steps.
+Skipping installation because update KB3033929 does not apply to this operating system (Microsoft Windows 10 Enterprise).
+ The upgrade of kb3033929 was successful.
+  Software install location not explicitly set, could be in package or
+  default install location if installer.
+
+KB2919442 v1.0.20160915 [Approved]
+kb2919442 package files upgrade completed. Performing other installation steps.
+Skipping installation because this hotfix only applies to Windows 8.1 and Windows Server 2012 R2.
+ The upgrade of kb2919442 was successful.
+  Software install location not explicitly set, could be in package or
+  default install location if installer.
+
+KB2919355 v1.0.20160915 [Approved]
+kb2919355 package files upgrade completed. Performing other installation steps.
+Skipping installation because this hotfix only applies to Windows 8.1 and Windows Server 2012 R2.
+ The upgrade of kb2919355 was successful.
+  Software install location not explicitly set, could be in package or
+  default install location if installer.
+
+KB2999226 v1.0.20181019 [Approved]
+kb2999226 package files upgrade completed. Performing other installation steps.
+Skipping installation because update KB2999226 does not apply to this operating system (Microsoft Windows 10 Enterprise).
+ The upgrade of kb2999226 was successful.
+  Software install location not explicitly set, could be in package or
+  default install location if installer.
+
+vcredist140 v14.16.27024.1 [Approved]
+vcredist140 package files upgrade completed. Performing other installation steps.
+Runtime for architecture x86 version 14.16.27024 is already installed.
+Runtime for architecture x64 version 14.16.27024 is already installed.
+ The upgrade of vcredist140 was successful.
+  Software install location not explicitly set, could be in package or
+  default install location if installer.
+
+vcredist2017 v14.16.27024.1 [Approved]
+vcredist2017 package files upgrade completed. Performing other installation steps.
+ The upgrade of vcredist2017 was successful.
+  Software install location not explicitly set, could be in package or
+  default install location if installer.
+
+dotnet4.6.2 v4.6.01590.20170129 [Approved]
+dotnet4.6.2 package files upgrade completed. Performing other installation steps.
+Microsoft .NET Framework 4.6.2 or later is already installed.
+ The upgrade of dotnet4.6.2 was successful.
+  Software install location not explicitly set, could be in package or
+  default install location if installer.
+
+visualstudio2017-installer v1.0.2 [Approved]
+visualstudio2017-installer package files upgrade completed. Performing other installation steps.
+ The upgrade of visualstudio2017-installer was successful.
+  Software install location not explicitly set, could be in package or
+  default install location if installer.
+
+visualstudio2017buildtools v15.9.4.0 [Approved]
+visualstudio2017buildtools package files upgrade completed. Performing other installation steps.
+Downloading channel manifest
+  from 'https://aka.ms/vs/15/release/channel'
+Progress: 100% - Completed download of C:\Users\goodinrx\AppData\Local\Temp\chocolatey\chocolatey-visualstudio.extension\ChannelManifest_81725945.man (69.37 KB).
+Download of ChannelManifest_81725945.man (69.37 KB) completed.
+Downloading catalog manifest
+  from 'https://download.visualstudio.microsoft.com/download/pr/8c0961d8-5c04-4143-b2c0-eceeb4711175/d2fe78ea770f7db24164bb0a0919ca67/visualstudio.vsman'
+Progress: 100% - Completed download of C:\Users\goodinrx\AppData\Local\Temp\chocolatey\chocolatey-visualstudio.extension\Catalog_-1473393573.man (7.79 MB).
+Download of Catalog_-1473393573.man (7.79 MB) completed.
+Downloading visualstudio2017buildtools
+  from 'https://download.visualstudio.microsoft.com/download/pr/a46d2db7-bd7b-43ee-bd7b-12624297e4ec/11b9c9bd44ec2b475f6da3d1802b3d00/vs_buildtools.exe'
+Progress: 100% - Completed download of C:\Users\goodinrx\AppData\Local\Temp\chocolatey\visualstudio2017buildtools\15.9.4.0\vs_buildtools.exe (1.22 MB).
+Download of vs_buildtools.exe (1.22 MB) completed.
+Hashes match.
+Installing visualstudio2017buildtools...
+
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\1028\help.html...
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\2052\help.html...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\1055\help.html...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\1046\help.html...
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\1042\help.html...
+
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\1029\help.html...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\1036\help.html...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\3082\help.html...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\1040\help.html...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\1031\help.html...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\1045\help.html...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\1033\help.html...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\1041\help.html...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\HelpFile\1049\help.html...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\vs_setup_bootstrapper.exe...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\Microsoft.Diagnostics.Tracing.EventSource.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\Microsoft.VisualStudio.RemoteControl.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\Microsoft.VisualStudio.Setup.Common.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\Microsoft.VisualStudio.Setup.Configuration.Interop.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\Microsoft.VisualStudio.Setup.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\Microsoft.VisualStudio.Setup.Download.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\Microsoft.VisualStudio.Setup.Engine.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\Microsoft.VisualStudio.Telemetry.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\Microsoft.VisualStudio.Utilities.Internal.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\Newtonsoft.Json.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\zh-Hans\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\zh-Hant\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\es\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\pt-BR\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\cs\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\tr\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\de\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\fr\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\it\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\pl\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\ko\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\ja\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\ru\vs_setup_bootstrapper.resources.dll...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\vs_setup_bootstrapper.config...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\vs_setup_bootstrapper.exe.config...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\detection.json...
+
+Preparing: C:\Users\goodinrx\AppData\Local\Temp\chocolatey\ea07af0561bb14d8919a0b\vs_bootstrapper_d15\vs_setup_bootstrapper.json...
+
+visualstudio2017buildtools has been installed.
+  visualstudio2017buildtools may be able to be automatically uninstalled.
+ The upgrade of visualstudio2017buildtools was successful.
+  Software installed to 'C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools'
+
+visualstudio2017-workload-vctools v1.3.1 [Approved]
+visualstudio2017-workload-vctools package files upgrade completed. Performing other installation steps.
+Installing visualstudio2017-workload-vctools...
+
+visualstudio2017-workload-vctools has been installed.
+ The upgrade of visualstudio2017-workload-vctools was successful.
+  Software install location not explicitly set, could be in package or
+  default install location if installer.
+
+Chocolatey upgraded 14/14 packages.
+ See the log for details (C:\ProgramData\chocolatey\logs\chocolatey.log).
+
+Upgraded:
+ - kb2919355 v1.0.20160915
+ - visualstudio2017-workload-vctools v1.3.1
+ - vcredist140 v14.16.27024.1
+ - kb2919442 v1.0.20160915
+ - chocolatey-visualstudio.extension v1.7.1
+ - chocolatey-windowsupdate.extension v1.0.3
+ - kb3033929 v1.0.4
+ - visualstudio2017buildtools v15.9.4.0
+ - vcredist2017 v14.16.27024.1
+ - dotnet4.6.2 v4.6.01590.20170129
+ - kb3035131 v1.0.2
+ - kb2999226 v1.0.20181019
+ - python2 v2.7.15
+ - visualstudio2017-installer v1.0.2
+Type ENTER to exit:

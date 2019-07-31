@@ -1,0 +1,29 @@
+Development WebServer
+=====================
+Why? So you can run some of your code in the browser.
+want?
+  to start automatically
+  to see any changes immediately on save
+  Allow share
+
+Server options
+1. npm http-server: (node.js) - ultra-smple : single command serves current directory : no config req
+2. npm live-server: also light weight : supports live loading => hit save changes immediately visible
+3. npm express: comprehensive (more features) : highly configurable : unlike 1 & 2 not just for static files :
+                production grade so can run anywhere so can have common configuration a big win if developing in node.
+Koa & hapi (Express alternatives) : Koa has embraced ES6 generators and hapi has cool config model.
+For server side work in Node Express/Koa/hapi should be considered but if not pure JS dev then likely overkill for your dev web server.
+
+Servers reltaed to your bundling option:
+4. budo: integrates with Browserify : has hot reloading
+5. Webpack dev server : comes with Webpack module bundler, fast to load changes as serves from memory : has hot reloading
+
+
+6 Browsersync: free : has two compelling features:
+1. Sets up a dedicated ip address on your local network - so others can see your app
+2. hit that ip from multiple devices and all the devices will reamin in sync - great for cross device testing
+ALSO: integrates with Webpack, Browserify, Gulp
+Browsersync recipes (possible integrations and workflow scenarios): https://github.com/BrowserSync/recipes
+Use either as a free dev web server or as way to augment exiting web server with additional features.
+NOTE: With the excpetioon of EXpress these are NOT FOR PRODUCTION nut for hosting your app during dev on our local machine
+See later for Prod.

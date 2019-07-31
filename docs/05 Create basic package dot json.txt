@@ -1,0 +1,20 @@
+1. In VSCode: Create new file in the project root called package.json
+
+2. Paste in the following:
+	{
+	  "name": "javascript-dev-env",
+  	   "version": "1.0.0",
+	  "license": "MIT",
+	  "private": true,
+	  "description": "JavaScript development environment",
+	  "keywords": [
+	    "learning",
+	    "js",
+	    "dev-env"
+ 		 ],
+	  "repository": "github:Ellimeg/js-dev-env",
+	  "author": "Roger Gooding",  
+	  "scripts": {},
+	}
+
+Note: 'scripts' section is initially empty but we will be adding to this bit to automate our processes.
