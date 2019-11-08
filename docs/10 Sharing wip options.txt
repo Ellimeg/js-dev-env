@@ -11,7 +11,7 @@ start your app
 lt --port3000
 
 ngrok - more secure - reqs login
-punches hole in firewall so loacl machine can operate as web server
+punches hole in firewall so local machine can operate as web server
 sign up
 intsall ngrok
 install authtoken

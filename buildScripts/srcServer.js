@@ -11,7 +11,11 @@ var app = express();
 // for now tell it any requests to the root shuld be handled by the function taking a req and resp
 app.get('/', function(req, res){
   // use path to join current dir (given by special variable __dirname) to src item
+  //res.sendFile(path.join(__dirname, '../src/index.html'))
+
+  // 01. Demo call to 3rd party js lib lodash:
   res.sendFile(path.join(__dirname, '../src/index.html'))
+
 });
 
 // after defining routing tell express to listern on defined port .

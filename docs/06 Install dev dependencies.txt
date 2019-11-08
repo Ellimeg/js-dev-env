@@ -301,3 +301,26 @@ Note : 	npm install will download packages and place them into a folder called '
     Install globally
 
     installation: npm i now -g
+
+    // Not installed but might:
+    Lodash
+    info: https://lodash.com/
+    summary: utility library delivering modularity, performance & extras
+    takes the hassle out of working with arrays, numbers, objects, strings, etc.
+    Apparently great for:
+      Iterating arrays, objects, & strings
+      Manipulating & testing values
+      Creating composite functions
+    install: see https://www.npmjs.com/package/n_
+
+    nodemon
+    info: https://nodemon.io/
+    Summary: a utility that will monitor for any changes in your source and automatically restart your server
+    install
+    globally: npm install -g nodemon
+    locally:  npm install --save-dev nodemon
+
+    Notes: Global install is recommended to allow using nodmon instead of node to run scripts.
+    When installed locally, nodemon will not be available in your system path.
+    So run by calling it from within an npm script (such as npm start) or using npx nodemon.)
+

@@ -3,7 +3,7 @@ Express Web Server
 Use Express for dev web server (popular, powerfull, configurable)
 
 
-1. Install: Its already intslled with npm insall step(listed in package.json: "express":
+1. Install: Its already intslled with npm insall step (listed in package.json as "express":
 
 2. Configure:
 2.1 Create a folder called buildScripts in root of project (stores all build related tools)
